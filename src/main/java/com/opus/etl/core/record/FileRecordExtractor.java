@@ -1,10 +1,8 @@
 package com.opus.etl.core.record;
 
-import java.util.stream.Stream;
-
-import com.opus.etl.core.config.FileConfig;
-import com.opus.etl.core.config.IConfig;
 import com.opus.etl.core.dto.ConfigDTO;
+import com.opus.etl.core.field.FileFieldExtractor;
+import com.opus.etl.core.field.IFieldExtractor;
 import com.opus.etl.core.stream.IStream;
 
 public class FileRecordExtractor implements IRecordExtractor {
@@ -16,18 +14,20 @@ public class FileRecordExtractor implements IRecordExtractor {
 		String recordeSeperator = config.getRecordSeperator();
 		int headerLineNumber = Integer.parseInt(config.getHeaderRow());
 
-		// Strore stream object into temp stream
-		Stream inputStream = stream.streamData(config);
+		// Store stream object into temp stream
 
 		// read each record using stream object
-		inputStream.skip(headerLineNumber).forEach((i) -> {
-
-			// System.out.println(i);
+		System.out.println("***********DATA************");
+		stream.streamData(config).skip(headerLineNumber).forEach((i) -> {
 
 			record = i.toString().split(recordeSeperator);
 
+			IFieldExtractor fieldExtractor = new FileFieldExtractor();
+
 			for (String line : record){
-				System.out.println("--- line: " + line);
+				System.out.println("-------- New Record  " +"---" );
+
+				fieldExtractor.extractFields(config, line);
 			}
 
 		});

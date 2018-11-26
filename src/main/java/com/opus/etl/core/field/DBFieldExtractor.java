@@ -1,15 +1,15 @@
 package com.opus.etl.core.field;
 
-import java.util.Set;
-
-import com.opus.etl.core.config.IConfig;
+import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.opus.etl.core.dto.ConfigDTO;
+
 public class DBFieldExtractor implements IFieldExtractor{
 
-	public Set<String> extractFields(IConfig config, String record) {
+	public Map<Integer, Map<String, String>> extractFields(ConfigDTO config, String record) {
 		// TODO Auto-generated method stub
 		return null;
 	}

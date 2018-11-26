@@ -18,9 +18,12 @@ public class Sample {
 		//Stream inputStream = iStream.streamData(config);
 		
 		//Record Extractor
-		IRecordExtractor record = new FileRecordExtractor();
+		IRecordExtractor recordExtractor = new FileRecordExtractor();
 		
-		record.extractecord(iStream, config);
+		String record = recordExtractor.extractecord(iStream, config);
+		
+		
+		
 
 	}
 }

@@ -1,9 +1,10 @@
 package com.opus.etl.core.field;
 
-import java.util.Set;
+import java.util.Map;
 
 import com.opus.etl.core.config.IConfig;
+import com.opus.etl.core.dto.ConfigDTO;
 
 public interface IFieldExtractor {
-	public Set<String> extractFields(IConfig config,String record);
+	public Map<Integer, Map<String, String>> extractFields(ConfigDTO config,String record);
 }

@@ -31,7 +31,7 @@ public class FileConfig implements IConfig{
         String fieldName = "";
         String fieldType = "";
         int fieldIndex = 0;
-        System.out.println(sourceType+"==>"+sourcePath+"==>"+fieldSeperator+"==>"+isHeader+"==>"+headerRow+"==>"+recordSeperator);
+//        System.out.println(sourceType+"==>"+sourcePath+"==>"+fieldSeperator+"==>"+isHeader+"==>"+headerRow+"==>"+recordSeperator);
         JSONArray arr = obj.getJSONArray("fields");
         for (int i = 0; i < arr.length(); i++) {
              fieldName = arr.getJSONObject(i).getString("name");
@@ -40,13 +40,13 @@ public class FileConfig implements IConfig{
              
              config.getFieldList().add(new Field(fieldName,fieldType,fieldIndex));
              
-             System.out.println(fieldName+"==>"+fieldType+"==>"+fieldIndex);
+//             System.out.println(fieldName+"==>"+fieldType+"==>"+fieldIndex);
              
              
             
         }
-        System.out.println(config.getFieldList().size());
-		System.out.println(config);
+//        System.out.println(config.getFieldList().size());
+//		System.out.println(config);
 		
 		return  config;
 	}
