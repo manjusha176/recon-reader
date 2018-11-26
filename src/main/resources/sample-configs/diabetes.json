@@ -1,0 +1,41 @@
+{"source": {
+          "type": "csv",
+          "path": "d:\\Recon\\diabetestrainbalanced.csv"
+        },
+        "fieldconf": {
+          "fieldsep": ","
+        },
+        "recordconf": {
+          "isheader": "true",
+          "headerrow": "1",
+          "recordsep": "\n"
+        },
+        "fields":[{"name" :"Pregnancies",
+                  "datatype" : "int",
+                  "index" : 0},
+                  {"name" :"Glucose",
+                  "datatype" : "String",
+                  "index" : 1},
+                  {"name" :"BloodPressure",
+                  "datatype" : "String",
+                  "index" : 2},
+                  {"name" :"SkinThickness",
+                  "datatype" : "String",
+                  "index" : 3},
+                   {"name" :"Insulin",
+                  "datatype" : "String",
+                  "index" : 4},
+                  {"name" :"BMI",
+                  "datatype" : "String",
+                  "index" : 5},
+                  {"name" :"DiabetesPedigreeFunction",
+                  "datatype" : "String",
+                  "index" : 6},
+                  {"name" :"Age",
+                  "datatype" : "String",
+                  "index" : 6},
+                  {"name" :"Outcome",
+                  "datatype" : "String",
+                  "index" : 7}
+                  ]
+}

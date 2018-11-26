@@ -1,0 +1,44 @@
+{"source": {
+          "type": "csv",
+          "path": "d:\\Recon\\input.csv"
+        },
+        "fieldconf": {
+          "fieldsep": ","
+        },
+        "recordconf": {
+          "isheader": "true",
+          "headerrow": "1",
+          "recordsep": "\n"
+        },
+        "fields":[{"name" :"Year",
+                  "datatype" : "int",
+                  "index" : 0},
+                  {"name" :"Industry_aggregation_NZSIOC",
+                  "datatype" : "String",
+                  "index" : 1},
+                  {"name" :"Industry_code_NZSIOC",
+                  "datatype" : "String",
+                  "index" : 2},
+                  {"name" :"Industry_name_NZSIOC",
+                  "datatype" : "String",
+                  "index" : 3},
+                   {"name" :"Units",
+                  "datatype" : "String",
+                  "index" : 4},
+                  {"name" :"Variable_code",
+                  "datatype" : "String",
+                  "index" : 5},
+                  {"name" :"Variable_name",
+                  "datatype" : "String",
+                  "index" : 6},
+                  {"name" :"Variable_category",
+                  "datatype" : "String",
+                  "index" : 6},
+                  {"name" :"Value",
+                  "datatype" : "String",
+                  "index" : 7},
+                  {"name" :"Industry_code_ANZSIC06",
+                  "datatype" : "String",
+                  "index" : 8}
+                  ]
+}
