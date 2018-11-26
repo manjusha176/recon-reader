@@ -1,5 +1,7 @@
 package com.opus.etl.core.record;
 
+import java.io.IOException;
+
 import com.opus.etl.core.config.FileConfig;
 import com.opus.etl.core.config.IConfig;
 import com.opus.etl.core.dto.ConfigDTO;
@@ -9,7 +11,7 @@ import com.opus.etl.core.stream.StreamFactory;
 
 public class Sample {
 	public static void main(String[] args) {
-		
+		try {
 		//config
 		IConfig fc = new FileConfig();
 		ConfigDTO config = fc.loadConfig();
@@ -21,7 +23,12 @@ public class Sample {
 		//Record Extractor
 		IRecordExtractor recordExtractor = new FileRecordExtractor();
 		
-		String record = recordExtractor.extractecord(iStream, config);
+		
+			String record = recordExtractor.extractecord(iStream, config);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error: "+e.toString());
+		}
 		
 
 	}
