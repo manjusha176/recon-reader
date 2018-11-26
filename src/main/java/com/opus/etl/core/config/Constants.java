@@ -59,13 +59,13 @@ public static final String jsonData1 = "{\"source\": {\r\n" +
 				"                  \"index\" : 6},\r\n" + 
 				"                  {\"name\" :\"Variable_category\",\r\n" + 
 				"                  \"datatype\" : \"String\",\r\n" + 
-				"                  \"index\" : 6},\r\n" + 
+				"                  \"index\" : 7},\r\n" + 
 				"                  {\"name\" :\"Value\",\r\n" + 
 				"                  \"datatype\" : \"String\",\r\n" + 
-				"                  \"index\" : 7},\r\n" + 
+				"                  \"index\" : 8},\r\n" + 
 				"                  {\"name\" :\"Industry_code_ANZSIC06\",\r\n" + 
 				"                  \"datatype\" : \"String\",\r\n" + 
-				"                  \"index\" : 8}\r\n" + 
+				"                  \"index\" : 9}\r\n" + 
 				"                  ]\r\n" + 
 				"}";
 }

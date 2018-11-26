@@ -11,8 +11,8 @@ public class FileConfig implements IConfig{
 	public ConfigDTO loadConfig() {
 		ConfigDTO config = new ConfigDTO();
 		
-		JSONObject obj = new JSONObject(Constants.jsonData);
-		System.out.println(Constants.jsonData);
+		JSONObject obj = new JSONObject(Constants.jsonData1);
+		System.out.println(Constants.jsonData1);
         String sourceType = obj.getJSONObject("source").getString("type");
         String sourcePath = obj.getJSONObject("source").getString("path");
         String fieldSeperator = obj.getJSONObject("fieldconf").getString("fieldsep");
