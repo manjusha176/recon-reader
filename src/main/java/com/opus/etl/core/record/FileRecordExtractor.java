@@ -1,5 +1,7 @@
 package com.opus.etl.core.record;
 
+import java.io.IOException;
+
 import com.opus.etl.core.dto.ConfigDTO;
 import com.opus.etl.core.field.FileFieldExtractor;
 import com.opus.etl.core.field.IFieldExtractor;
@@ -9,7 +11,7 @@ public class FileRecordExtractor implements IRecordExtractor {
 
 	public String[] record;
 
-	public String extractecord(IStream stream, ConfigDTO config) {
+	public String extractecord(IStream stream, ConfigDTO config) throws IOException {
 
 		String recordeSeperator = config.getRecordSeperator();
 		int headerLineNumber = Integer.parseInt(config.getHeaderRow());
