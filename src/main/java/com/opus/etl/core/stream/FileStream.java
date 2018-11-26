@@ -25,4 +25,5 @@ public class FileStream implements IStream {
 		return null;
 	}
 
+	
 }

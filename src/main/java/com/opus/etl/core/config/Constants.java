@@ -3,7 +3,7 @@ package com.opus.etl.core.config;
 public class Constants {
 public static final String jsonData = "{\"source\": {\r\n" + 
 		"          \"type\": \"csv\",\r\n" + 
-		"          \"path\": \"d:\\\\Recon\\\\input.csv\"\r\n" + 
+		"          \"path\": \"d:\\\\Recon\\\\test.csv\"\r\n" + 
 		"        },\r\n" + 
 		"        \"fieldconf\": {\r\n" + 
 		"          \"fieldsep\": \",\"\r\n" + 

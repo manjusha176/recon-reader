@@ -2,10 +2,10 @@ package com.opus.etl.core.stream;
 
 import java.util.stream.Stream;
 
-import com.opus.etl.core.config.IConfig;
+import com.opus.etl.core.dto.ConfigDTO;
 
-public class XLSStream {
-	public Stream<?> streamData(IConfig config) {
+public class XLSStream implements IStream{
+	public Stream<?> streamData(ConfigDTO config) {
 		// TODO Auto-generated method stub
 		return null;
 	}

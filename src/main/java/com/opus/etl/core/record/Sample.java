@@ -5,6 +5,7 @@ import com.opus.etl.core.config.IConfig;
 import com.opus.etl.core.dto.ConfigDTO;
 import com.opus.etl.core.stream.FileStream;
 import com.opus.etl.core.stream.IStream;
+import com.opus.etl.core.stream.StreamFactory;
 
 public class Sample {
 	public static void main(String[] args) {
@@ -13,16 +14,14 @@ public class Sample {
 		IConfig fc = new FileConfig();
 		ConfigDTO config = fc.loadConfig();
 
-		//Stream
-		IStream iStream = new FileStream();
+		//Stream with factory pattern
+		IStream iStream = StreamFactory.getStreamClass(config.getSourceType());
 		//Stream inputStream = iStream.streamData(config);
 		
 		//Record Extractor
 		IRecordExtractor recordExtractor = new FileRecordExtractor();
 		
 		String record = recordExtractor.extractecord(iStream, config);
-		
-		
 		
 
 	}
