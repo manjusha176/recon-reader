@@ -11,30 +11,70 @@ public class FileRecordExtractor implements IRecordExtractor {
 
 	public String[] record;
 
-	public String extractecord(IStream stream, ConfigDTO config) throws IOException {
+	public String extractRecord(IStream stream, ConfigDTO config) throws IOException {
 
-		String recordeSeperator = config.getRecordSeperator();
+		String fileType = config.getSourceType();
+
+		switch (fileType) {
+		case "csv":
+			extractCSV(stream, config);
+			break;
+		case "txt":
+			extractFixedFormatFile(stream, config);
+			break;
+		case "xls":
+
+			break;
+		case "xlsx":
+
+			break;
+		case "db":
+
+			break;
+		default:
+			break;
+		}
+
+		return null;
+	}
+
+	public void extractCSV(IStream stream, ConfigDTO config) throws IOException {
+		String recordSeperator = config.getRecordSeperator();
 		int headerLineNumber = Integer.parseInt(config.getHeaderRow());
 
 		// Store stream object into temp stream
 
 		// read each record using stream object
 		System.out.println("***********DATA************");
-		stream.streamData(config).skip(headerLineNumber).forEach((i) -> {
+		stream.streamData(config).skip(headerLineNumber).forEach((eachRecord) -> {
 
-			record = i.toString().split(recordeSeperator);
+			record = eachRecord.toString().split(recordSeperator);
 
 			IFieldExtractor fieldExtractor = new FileFieldExtractor();
 
 			for (String line : record){
-				System.out.println("-------- New Record  " +"---" );
+				System.out.println("-------- New Record  " + "---");
 
 				fieldExtractor.extractFields(config, line);
 			}
 
 		});
 
-		return null;
+	}
+
+	public void extractFixedFormatFile(IStream stream, ConfigDTO config) throws IOException {
+		Boolean headerPresent = true;
+		int headerLineNumber = 0;
+		int totalRecordLength = 81;
+
+		// System.out.println(stream.streamData(config));
+		stream.streamData(config).skip(headerLineNumber).forEach((eachRecord) -> {
+
+			System.out.println(eachRecord);
+			System.out.println(eachRecord.toString().length() + "-----------");
+
+		});
+
 	}
 
 }
