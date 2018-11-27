@@ -1,0 +1,5 @@
+Col#	Field_Name		Pad_Size
+1		Id				2	
+2		Name			20
+3		Amount			08
+4		Remark			45
