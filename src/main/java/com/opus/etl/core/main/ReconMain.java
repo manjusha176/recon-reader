@@ -27,9 +27,8 @@ public class ReconMain {
 			IRecordExtractor recordExtractor = new FileRecordExtractor();
 			
 			
-			String record = recordExtractor.extractecord(iStream, config);
+			recordExtractor.extractecord(iStream, config);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				System.out.println("Error: "+e.toString());
 			}
 			
