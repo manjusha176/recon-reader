@@ -12,10 +12,10 @@ public class FileStream implements IStream {
 
 	public Stream<?> streamData(ConfigDTO config) throws IOException {
 		
-		String fileName = config.getSourcePath(); // this path is on my local
+		String fileName = config.getSourcePath(); 
 
 		Stream<?> inputStream = null;
-//		try {
+
 			inputStream = Files.lines(Paths.get(fileName), StandardCharsets.UTF_8);
 			return inputStream;
 	}

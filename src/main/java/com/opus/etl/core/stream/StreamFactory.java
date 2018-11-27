@@ -4,7 +4,7 @@ public class StreamFactory {
 
 	public static IStream getStreamClass(String fileType) {
 		
-		if (fileType.equals("csv"))
+		if (fileType.equals("csv") ||fileType.equals("txt"))
 			return new FileStream();
 		else if (fileType.equals("db"))
 			return new DBStream();
