@@ -16,29 +16,25 @@ public class ReconMain {
 	public static void main(String[] args) {
 
 		try {
-	
-			ReconMain obj = new ReconMain();
-			
-			//for delimiter file
-			obj.TestDelimeterFile();
-			
-			//for flat file
-			obj.TestFlatFile();
 
+			ReconMain obj = new ReconMain();
+
+			// for delimiter file
+			obj.testDelimeterFile();
+
+			// for flat file
+			obj.testFlatFile();
 
 		} catch (IOException e) {
 			System.out.println("Error: " + e.toString());
 		}
 
 	}
-	
-	
-	
-	
-	public void TestDelimeterFile() throws IOException {
+
+	public void testDelimeterFile() throws IOException {
 		IConfig fc = new FileConfig();
 		ConfigDTO config = fc.loadConfig();
-		
+
 		// Stream with factory pattern
 		ILoader iStream = LoaderFactory.getStreamClass(config.getSourceType());
 
@@ -47,11 +43,11 @@ public class ReconMain {
 
 		recordExtractor.extractRecord(iStream, config);
 	}
-	
-	public void TestFlatFile() throws IOException {
+
+	public void testFlatFile() throws IOException {
 		IConfig fc = new FlatFileConfig();
 		ConfigDTO config = fc.loadConfig();
-		
+
 		// Stream with factory pattern
 		ILoader iStream = LoaderFactory.getStreamClass(config.getSourceType());
 

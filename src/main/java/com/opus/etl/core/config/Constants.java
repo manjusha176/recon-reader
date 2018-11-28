@@ -99,7 +99,7 @@ public static final String jsonDataflat = "{\r\n" +
 		"    },\r\n" + 
 		"    {\r\n" + 
 		"      \"name\": \"amount\",\r\n" + 
-		"      \"datatype\": \"int\",\r\n" + 
+		"      \"datatype\": \"double\",\r\n" + 
 		"      \"index\": 2,\r\n" + 
 		"      \"size\": 8\r\n" + 
 		"    },\r\n" + 

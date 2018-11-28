@@ -11,14 +11,13 @@ import com.opus.etl.core.dto.ConfigDTO;
 public class FileLoader implements ILoader {
 
 	public Stream<?> streamData(ConfigDTO config) throws IOException {
-		
-		String fileName = config.getSourcePath(); 
+
+		String fileName = config.getSourcePath();
 
 		Stream<?> inputStream = null;
 
-			inputStream = Files.lines(Paths.get(fileName), StandardCharsets.UTF_8);
-			return inputStream;
+		inputStream = Files.lines(Paths.get(fileName), StandardCharsets.UTF_8);
+		return inputStream;
 	}
 
-	
 }

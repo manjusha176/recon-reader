@@ -21,7 +21,7 @@
                   "index" : 2,
                   "size":20},
                   {"name" :"amount",
-                  "datatype" : "int",
+                  "datatype" : "double",
                   "index" : 2,
                   "size":8
                   },
