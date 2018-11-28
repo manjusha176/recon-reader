@@ -1,0 +1,34 @@
+{"source": {
+          "type": "txt",
+          "path": "d:\\Recon\\sample.txt"
+        },
+        "fieldconf": {
+          "fieldsep": ","
+        },
+        "recordconf": {
+          "isheader": "true",
+          "headerrow": "1",
+          "recordsep": "\n",
+          "totalsize": "75"
+        },
+        "fields":[{"name" :"id",
+                  "datatype" : "int",
+                  "index" : 0,
+                  "size":2
+        },
+                  {"name" :"name",
+                  "datatype" : "String",
+                  "index" : 2,
+                  "size":20},
+                  {"name" :"amount",
+                  "datatype" : "int",
+                  "index" : 2,
+                  "size":8
+                  },
+                  {"name" :"remark",
+                  "datatype" : "String",
+                  "index" : 2,
+                  "size":45
+                  }
+                  ]       
+}

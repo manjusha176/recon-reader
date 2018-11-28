@@ -8,9 +8,9 @@ public class ConfigDTO {
 	private String sourcePath;
 	private String fieldSeperator;
 	private boolean isheader;
-	
 	private String headerRow;
 	private String recordSeperator;
+	private int totalSize;
 	private List <Field>fieldList;
 
 	public ConfigDTO(){
@@ -18,14 +18,23 @@ public class ConfigDTO {
 	}
 
 	public ConfigDTO(String sourceType, String sourcePath, String fieldSeperator, boolean isheader, String headerRow,
-			String recordSeperator, List<Field> fieldList) {
+			String recordSeperator, int totalSize, List<Field> fieldList) {
 		this.sourceType = sourceType;
 		this.sourcePath = sourcePath;
 		this.fieldSeperator = fieldSeperator;
 		this.isheader = isheader;
 		this.headerRow = headerRow;
 		this.recordSeperator = recordSeperator;
+		this.totalSize=totalSize;
 		this.fieldList = fieldList;
+	}
+
+	public int getTotalSize() {
+		return totalSize;
+	}
+
+	public void setTotalSize(int totalSize) {
+		this.totalSize = totalSize;
 	}
 
 	public String getSourceType() {
