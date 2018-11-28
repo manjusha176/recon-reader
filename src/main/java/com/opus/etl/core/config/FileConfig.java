@@ -20,6 +20,7 @@ public class FileConfig implements IConfig {
 		String isHeader = obj.getJSONObject("recordconf").getString("isheader");
 		String headerRow = obj.getJSONObject("recordconf").getString("headerrow");
 		String recordSeperator = obj.getJSONObject("recordconf").getString("recordsep");
+		int totalSize = obj.getJSONObject("recordconf").getInt("totalSize");
 
 		config.setSourceType(sourceType);
 		config.setSourcePath(sourcePath);
@@ -27,6 +28,7 @@ public class FileConfig implements IConfig {
 		config.setIsheader(isHeader.equals("true") ? true : false);
 		config.setHeaderRow(headerRow);
 		config.setRecordSeperator(recordSeperator);
+		config.setTotalSize(totalSize);
 
 		String fieldName = "";
 		String fieldType = "";

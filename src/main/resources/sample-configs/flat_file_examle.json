@@ -1,0 +1,34 @@
+{"source": {
+          "type": "csv",
+          "path": "d:\\yogeshyogesh"
+        },
+        "fieldconf": {
+          "field sep": ",  or ;"
+        },
+        "record conf": {
+          "isHeader": "true",
+          "headerRow": "1",
+          "newRecord": "\n",
+          "totalSize": 75
+        },
+        "fields":[{"name" :"id",
+                  "datatype" : "int",
+                  "index" : 0,
+                  "size":2
+        },
+                  {"name" :"name",
+                  "datatype" : "String",
+                  "index" : 2,
+                  "size":20},
+                  {"name" :"amount",
+                  "datatype" : "int",
+                  "index" : 2,
+                  "size":8
+                  },
+                  {"name" :"remark",
+                  "datatype" : "String",
+                  "index" : 2,
+                  "size":45
+                  }
+                  ]       
+}

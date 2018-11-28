@@ -71,39 +71,38 @@ public static final String jsonData1 = "{\"source\": {\r\n" +
 
 // For flat file
 public static final String jsonDataflat = "{\"source\": {\r\n" + 
-	       "          \"type\": \"txt\",\r\n" + 
-	       "          \"path\": \"d:\\\\Recon\\\\sample.txt\"\r\n" + 
-	       "        },\r\n" + 
-	       "        \"fieldconf\": {\r\n" + 
-	       "          \"field sep\": \",  or ;\"\r\n" + 
-	       "        },\r\n" + 
-	       "        \"record conf\": {\r\n" + 
-	       "          \"isHeader\": \"true\",\r\n" + 
-	       "          \"headerRow\": \"1\",\r\n" + 
-	       "          \"newRecord\": \"\\n\"\r\n" + 
-	       "        },\r\n" + 
-	       "        \"fields\":[{\"name\" :\"id\",\r\n" + 
-	       "                  \"datatype\" : \"int\",\r\n" + 
-	       "                  \"index\" : 0,\r\n" + 
-	       "                  \"size\":2\r\n" + 
-	       "        },\r\n" + 
-	       "                  {\"name\" :\"name\",\r\n" + 
-	       "                  \"datatype\" : \"String\",\r\n" + 
-	       "                  \"index\" : 2,\r\n" + 
-	       "                  \"size\":20},\r\n" + 
-	       "                  {\"name\" :\"amount\",\r\n" + 
-	       "                  \"datatype\" : \"int\",\r\n" + 
-	       "                  \"index\" : 2,\r\n" + 
-	       "                  \"size\":8\r\n" + 
-	       "                  },\r\n" + 
-	       "                  {\"name\" :\"remark\",\r\n" + 
-	       "                  \"datatype\" : \"String\",\r\n" + 
-	       "                  \"index\" : 2,\r\n" + 
-	       "                  \"size\":45\r\n" + 
-	       "                  }\r\n" + 
-	       "                  ]\r\n" + 
-	       "          \r\n" + 
-	       "        \r\n" + 
-	       "}";
+		"          \"type\": \"csv\",\r\n" + 
+		"          \"path\": \"d:\\\\yogeshyogesh\"\r\n" + 
+		"        },\r\n" + 
+		"        \"fieldconf\": {\r\n" + 
+		"          \"field sep\": \",  or ;\"\r\n" + 
+		"        },\r\n" + 
+		"        \"record conf\": {\r\n" + 
+		"          \"isHeader\": \"true\",\r\n" + 
+		"          \"headerRow\": \"1\",\r\n" + 
+		"          \"newRecord\": \"\\n\",\r\n" + 
+		"          \"totalSize\": 75\r\n" + 
+		"        },\r\n" + 
+		"        \"fields\":[{\"name\" :\"id\",\r\n" + 
+		"                  \"datatype\" : \"int\",\r\n" + 
+		"                  \"index\" : 0,\r\n" + 
+		"                  \"size\":2\r\n" + 
+		"        },\r\n" + 
+		"                  {\"name\" :\"name\",\r\n" + 
+		"                  \"datatype\" : \"String\",\r\n" + 
+		"                  \"index\" : 2,\r\n" + 
+		"                  \"size\":20},\r\n" + 
+		"                  {\"name\" :\"amount\",\r\n" + 
+		"                  \"datatype\" : \"int\",\r\n" + 
+		"                  \"index\" : 2,\r\n" + 
+		"                  \"size\":8\r\n" + 
+		"                  },\r\n" + 
+		"                  {\"name\" :\"remark\",\r\n" + 
+		"                  \"datatype\" : \"String\",\r\n" + 
+		"                  \"index\" : 2,\r\n" + 
+		"                  \"size\":45\r\n" + 
+		"                  }\r\n" + 
+		"                  ]       \r\n" + 
+		"}";
 
 }
