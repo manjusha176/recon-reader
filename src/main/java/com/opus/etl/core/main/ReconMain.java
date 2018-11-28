@@ -7,6 +7,7 @@ import com.opus.etl.core.config.IConfig;
 import com.opus.etl.core.dto.ConfigDTO;
 import com.opus.etl.core.record.FileRecordExtractor;
 import com.opus.etl.core.record.IRecordExtractor;
+import com.opus.etl.core.record.RecordFactory;
 import com.opus.etl.core.stream.IStream;
 import com.opus.etl.core.stream.StreamFactory;
 
@@ -21,13 +22,12 @@ public class ReconMain {
 
 			//Stream with factory pattern
 			IStream iStream = StreamFactory.getStreamClass(config.getSourceType());
-			//Stream inputStream = iStream.streamData(config);
 			
-			//Record Extractor
-			IRecordExtractor recordExtractor = new FileRecordExtractor();
-			
+			//Record Extractor with factory pattern
+			IRecordExtractor recordExtractor = RecordFactory.getRecordExtractorClass(config.getSourceType());
 			
 			recordExtractor.extractRecord(iStream, config);
+			
 			} catch (IOException e) {
 				System.out.println("Error: "+e.toString());
 			}
