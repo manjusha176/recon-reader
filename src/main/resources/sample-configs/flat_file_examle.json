@@ -1,15 +1,15 @@
 {"source": {
-          "type": "csv",
-          "path": "d:\\yogeshyogesh"
+          "type": "txt",
+          "path": "d:\\Recon\\sample.txt"
         },
         "fieldconf": {
-          "field sep": ",  or ;"
+          "fieldsep": ","
         },
-        "record conf": {
-          "isHeader": "true",
-          "headerRow": "1",
-          "newRecord": "\n",
-          "totalSize": 75
+        "recordconf": {
+          "isheader": "true",
+          "headerrow": "1",
+          "recordsep": "\n",
+          "totalsize": "75"
         },
         "fields":[{"name" :"id",
                   "datatype" : "int",
