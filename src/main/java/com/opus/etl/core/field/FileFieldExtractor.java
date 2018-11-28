@@ -16,10 +16,7 @@ public class FileFieldExtractor implements IFieldExtractor {
 	public Map<Integer, Map<String, String>> extractFields(ConfigDTO config, String record) {
 		int countDelimiter = 0;
 
-		List<String> headerList = new ArrayList<>(); /// getting header list from config
-		for (Field fieldProperty : config.getFieldList()){
-			headerList.add(fieldProperty.getFieldName());
-		}
+		List<String> headerList = getHeaderList(config);
 
 		String delimiter = config.getFieldSeperator();
 		char[] delimiterChar = delimiter.toCharArray();
@@ -41,12 +38,7 @@ public class FileFieldExtractor implements IFieldExtractor {
 		}
 
 		// set header and value in map
-		Map<String, String> fieldMap = new HashMap<>();
-		int i = 0;
-		for (String field : fieldList){
-			fieldMap.put(headerList.get(i), field);
-			i++;
-		}
+		Map<String, String> fieldMap = getFieldMap(headerList, fieldList);
 
 		// iterating map of key/value
 		Iterator<Map.Entry<String, String>> entries = fieldMap.entrySet().iterator();
@@ -62,6 +54,24 @@ public class FileFieldExtractor implements IFieldExtractor {
 
 		return finalMap;
 
+	}
+
+	public Map<String, String> getFieldMap(List<String> headerList, List<String> fieldList) {
+		Map<String, String> fieldMap = new HashMap<>();
+		int i = 0;
+		for (String field : fieldList){
+			fieldMap.put(headerList.get(i), field);
+			i++;
+		}
+		return fieldMap;
+	}
+
+	public List<String> getHeaderList(ConfigDTO config) {
+		List<String> headerList = new ArrayList<>(); /// getting header list from config
+		for (Field fieldProperty : config.getFieldList()){
+			headerList.add(fieldProperty.getFieldName());
+		}
+		return headerList;
 	}
 
 }

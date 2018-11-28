@@ -4,11 +4,11 @@ public class StreamFactory {
 
 	public static IStream getStreamClass(String fileType) {
 		
-		if (fileType.equals("csv") ||fileType.equals("txt"))
+		if (fileType.equalsIgnoreCase("csv") ||fileType.equalsIgnoreCase("txt"))
 			return new FileStream();
-		else if (fileType.equals("db"))
+		else if (fileType.equalsIgnoreCase("db"))
 			return new DBStream();
-		else if (fileType.equals("xls"))
+		else if (fileType.equalsIgnoreCase("xls"))
 			return new XLSStream();
 
 		return null;
