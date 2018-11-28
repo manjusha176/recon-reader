@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import com.opus.etl.core.dto.ConfigDTO;
 import com.opus.etl.core.field.FileFieldExtractor;
+import com.opus.etl.core.field.FixedFormatFieldExtractor;
 import com.opus.etl.core.field.IFieldExtractor;
 import com.opus.etl.core.stream.IStream;
 
@@ -51,6 +52,7 @@ public class FileRecordExtractor implements IRecordExtractor {
 
 		int headerLineNumber = Integer.parseInt(config.getHeaderRow());
 		int totalRecordLength = Integer.parseInt(config.getTotalSize());
+		IFieldExtractor fixedFieldExtractor = new FixedFormatFieldExtractor();
 
 		stream.streamData(config).skip(headerLineNumber).forEach((eachRecord) -> {
 
@@ -58,7 +60,8 @@ public class FileRecordExtractor implements IRecordExtractor {
 			record = eachRecord.toString().split("(?<=\\G.{" + totalRecordLength + "})");
 
 			for (String line : record){
-				System.out.println("--------Record length -> " + line.length() + ":::: record ->" + line);
+				fixedFieldExtractor.extractFields(config, line);
+			//	System.out.println("--------Record length -> " + line.length() + ":::: record ->" + line);
 
 			}
 
