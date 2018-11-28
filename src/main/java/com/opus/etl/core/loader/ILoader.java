@@ -1,11 +1,11 @@
-package com.opus.etl.core.stream;
+package com.opus.etl.core.loader;
 
 import java.io.IOException;
 import java.util.stream.Stream;
 
 import com.opus.etl.core.dto.ConfigDTO;
 
-public interface IStream {
+public interface ILoader {
 	public Stream<?> streamData(ConfigDTO config) throws IOException;
 
 }

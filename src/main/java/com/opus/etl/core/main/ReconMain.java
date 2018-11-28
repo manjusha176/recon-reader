@@ -6,10 +6,10 @@ import com.opus.etl.core.config.FileConfig;
 import com.opus.etl.core.config.FlatFileConfig;
 import com.opus.etl.core.config.IConfig;
 import com.opus.etl.core.dto.ConfigDTO;
+import com.opus.etl.core.loader.ILoader;
+import com.opus.etl.core.loader.LoaderFactory;
 import com.opus.etl.core.record.FileRecordExtractor;
 import com.opus.etl.core.record.IRecordExtractor;
-import com.opus.etl.core.stream.IStream;
-import com.opus.etl.core.stream.StreamFactory;
 
 public class ReconMain {
 
@@ -40,7 +40,7 @@ public class ReconMain {
 		ConfigDTO config = fc.loadConfig();
 		
 		// Stream with factory pattern
-		IStream iStream = StreamFactory.getStreamClass(config.getSourceType());
+		ILoader iStream = LoaderFactory.getStreamClass(config.getSourceType());
 
 		// Record Extractor
 		IRecordExtractor recordExtractor = new FileRecordExtractor();
@@ -53,7 +53,7 @@ public class ReconMain {
 		ConfigDTO config = fc.loadConfig();
 		
 		// Stream with factory pattern
-		IStream iStream = StreamFactory.getStreamClass(config.getSourceType());
+		ILoader iStream = LoaderFactory.getStreamClass(config.getSourceType());
 
 		// Record Extractor
 		IRecordExtractor recordExtractor = new FileRecordExtractor();

@@ -1,4 +1,4 @@
-package com.opus.etl.core.stream;
+package com.opus.etl.core.loader;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 // test for pull req
 import com.opus.etl.core.dto.ConfigDTO;
 
-public class FileStream implements IStream {
+public class FileLoader implements ILoader {
 
 	public Stream<?> streamData(ConfigDTO config) throws IOException {
 		
