@@ -4,11 +4,21 @@ public class Field {
 	private String fieldName;
 	private String fieldType;
 	private int fieldIndex;
+	private int fieldSize;
 
-	public Field(String fieldName, String fieldType, int fieldIndex) {
+	public Field(String fieldName, String fieldType, int fieldIndex, int fieldSize) {
 		this.fieldName = fieldName;
 		this.fieldType = fieldType;
 		this.fieldIndex = fieldIndex;
+		this.fieldSize = fieldSize;
+	}
+
+	public int getFieldSize() {
+		return fieldSize;
+	}
+
+	public void setFieldSize(int fieldSize) {
+		this.fieldSize = fieldSize;
 	}
 
 	public String getFieldName() {
