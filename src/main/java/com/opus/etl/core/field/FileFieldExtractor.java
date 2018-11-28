@@ -16,7 +16,7 @@ public class FileFieldExtractor implements IFieldExtractor {
 		List<String> headerList = getHeaderList(config);
 
 		String delimiter = config.getFieldSeperator();
-		char[] delimiterChar = delimiter.toCharArray(); //TODO convert delimiter datatype from String to char
+		char[] delimiterChar = delimiter.toCharArray(); // TODO convert delimiter datatype from String to char
 
 		ArrayList<String> words = new ArrayList<>();
 		boolean notInsideComma = true;
