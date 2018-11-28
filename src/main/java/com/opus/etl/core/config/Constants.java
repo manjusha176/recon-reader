@@ -71,8 +71,8 @@ public static final String jsonData1 = "{\"source\": {\r\n" +
 
 // For flat file
 public static final String jsonDataflat = "{\"source\": {\r\n" + 
-	       "          \"type\": \"csv\",\r\n" + 
-	       "          \"path\": \"d:\\\\yogeshyogesh\"\r\n" + 
+	       "          \"type\": \"txt\",\r\n" + 
+	       "          \"path\": \"d:\\\\Recon\\\\sample.txt\"\r\n" + 
 	       "        },\r\n" + 
 	       "        \"fieldconf\": {\r\n" + 
 	       "          \"field sep\": \",  or ;\"\r\n" + 
