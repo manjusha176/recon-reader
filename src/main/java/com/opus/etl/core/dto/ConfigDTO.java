@@ -18,15 +18,20 @@ public class ConfigDTO {
 	}
 
 	public ConfigDTO(String sourceType, String sourcePath, String fieldSeperator, boolean isheader, String headerRow,
-			String recordSeperator, String totalSize, List<Field> fieldList) {
+			String recordSeperator,  List<Field> fieldList) {
 		this.sourceType = sourceType;
 		this.sourcePath = sourcePath;
 		this.fieldSeperator = fieldSeperator;
 		this.isheader = isheader;
 		this.headerRow = headerRow;
 		this.recordSeperator = recordSeperator;
-		this.totalSize=totalSize;
 		this.fieldList = fieldList;
+	}
+	
+	public ConfigDTO(String sourceType, String sourcePath, String fieldSeperator, boolean isheader, String headerRow,
+			String recordSeperator,String totalSize, List<Field> fieldList) {
+		this(sourceType,sourcePath,fieldSeperator,isheader,headerRow,recordSeperator,fieldList);
+		this.totalSize=totalSize;
 	}
 
 	public String getTotalSize() {

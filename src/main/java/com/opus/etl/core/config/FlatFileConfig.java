@@ -6,13 +6,13 @@ import org.json.JSONObject;
 import com.opus.etl.core.dto.ConfigDTO;
 import com.opus.etl.core.dto.Field;
 
-public class FileConfig implements IConfig {
+public class FlatFileConfig implements IConfig {
 
 	public ConfigDTO loadConfig() {
 		ConfigDTO config = new ConfigDTO();
 
-		JSONObject obj = new JSONObject(Constants.jsonData1);
-		System.out.println(Constants.jsonData1);
+		JSONObject obj = new JSONObject(Constants.jsonDataflat);
+		System.out.println(Constants.jsonDataflat);
 		String sourceType = obj.getJSONObject("source").getString("type");
 		String sourcePath = obj.getJSONObject("source").getString("path");
 		String fieldSeperator = obj.getJSONObject("fieldconf").getString("fieldsep");
@@ -20,7 +20,7 @@ public class FileConfig implements IConfig {
 		String isHeader = obj.getJSONObject("recordconf").getString("isheader");
 		String headerRow = obj.getJSONObject("recordconf").getString("headerrow");
 		String recordSeperator = obj.getJSONObject("recordconf").getString("recordsep");
-		// String totalSize = obj.getJSONObject("recordconf").getString("totalsize");
+		String totalSize = obj.getJSONObject("recordconf").getString("totalsize");
 
 		config.setSourceType(sourceType);
 		config.setSourcePath(sourcePath);
@@ -28,21 +28,21 @@ public class FileConfig implements IConfig {
 		config.setIsheader(isHeader.equals("true") ? true : false);
 		config.setHeaderRow(headerRow);
 		config.setRecordSeperator(recordSeperator);
-		// config.setTotalSize(totalSize);
+		config.setTotalSize(totalSize);
 
 		String fieldName = "";
 		String fieldType = "";
 		int fieldIndex = 0;
-		// int fieldSize= 0;
+		int fieldSize= 0;
 		// System.out.println(sourceType+"==>"+sourcePath+"==>"+fieldSeperator+"==>"+isHeader+"==>"+headerRow+"==>"+recordSeperator);
 		JSONArray arr = obj.getJSONArray("fields");
 		for (int i = 0; i < arr.length(); i++) {
 			fieldName = arr.getJSONObject(i).getString("name");
 			fieldType = arr.getJSONObject(i).getString("datatype");
 			fieldIndex = arr.getJSONObject(i).getInt("index");
-			// fieldSize = arr.getJSONObject(i).getInt("size");
+			fieldSize = arr.getJSONObject(i).getInt("size");
 
-			config.getFieldList().add(new Field(fieldName, fieldType, fieldIndex));
+			config.getFieldList().add(new Field(fieldName, fieldType, fieldIndex, fieldSize));
 
 			// System.out.println(fieldName+"==>"+fieldType+"==>"+fieldIndex);
 

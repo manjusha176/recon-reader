@@ -5,11 +5,17 @@ public class Field {
 	private String fieldType;
 	private int fieldIndex;
 	private int fieldSize;
-
-	public Field(String fieldName, String fieldType, int fieldIndex, int fieldSize) {
+	
+	//For CSV File
+	public Field(String fieldName, String fieldType, int fieldIndex) {
 		this.fieldName = fieldName;
 		this.fieldType = fieldType;
 		this.fieldIndex = fieldIndex;
+	}
+	
+	//For flat file
+	public Field(String fieldName, String fieldType, int fieldIndex, int fieldSize) {
+		this(fieldName,  fieldType,  fieldIndex);
 		this.fieldSize = fieldSize;
 	}
 

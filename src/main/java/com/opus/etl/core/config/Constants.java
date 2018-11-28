@@ -2,8 +2,8 @@ package com.opus.etl.core.config;
 
 public class Constants {
 public static final String jsonData = "{\"source\": {\r\n" + 
-		"          \"type\": \"txt\",\r\n" + 
-		"          \"path\": \"d:\\\\Recon\\\\input.txt\"\r\n" + 
+		"          \"type\": \"csv\",\r\n" + 
+		"          \"path\": \"d:\\\\Recon\\\\input.csv\"\r\n" + 
 		"        },\r\n" + 
 		"        \"fieldconf\": {\r\n" + 
 		"          \"fieldsep\": \",\"\r\n" + 
@@ -25,8 +25,8 @@ public static final String jsonData = "{\"source\": {\r\n" +
 		"}";
 
 public static final String jsonData1 = "{\"source\": {\r\n" + 
-				"          \"type\": \"txt\",\r\n" + 
-				"          \"path\": \"d:\\\\Recon\\\\input.txt\"\r\n" + 
+				"          \"type\": \"csv\",\r\n" + 
+				"          \"path\": \"d:\\\\Recon\\\\input.csv\"\r\n" + 
 				"        },\r\n" + 
 				"        \"fieldconf\": {\r\n" + 
 				"          \"fieldsep\": \",\"\r\n" + 
@@ -94,7 +94,7 @@ public static final String jsonDataflat = "{\r\n" +
 		"    {\r\n" + 
 		"      \"name\": \"name\",\r\n" + 
 		"      \"datatype\": \"String\",\r\n" + 
-		"      \"index\": 2,\r\n" + 
+		"      \"index\": 1,\r\n" + 
 		"      \"size\": 20\r\n" + 
 		"    },\r\n" + 
 		"    {\r\n" + 
@@ -106,7 +106,7 @@ public static final String jsonDataflat = "{\r\n" +
 		"    {\r\n" + 
 		"      \"name\": \"remark\",\r\n" + 
 		"      \"datatype\": \"String\",\r\n" + 
-		"      \"index\": 2,\r\n" + 
+		"      \"index\": 3,\r\n" + 
 		"      \"size\": 45\r\n" + 
 		"    }\r\n" + 
 		"  ]\r\n" + 
