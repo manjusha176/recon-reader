@@ -29,7 +29,7 @@ public class FileFieldExtractor implements IFieldExtractor {
 		}
 
 		words.add(record.substring(start));
-		System.out.println(record + "---->" + words);
+		System.out.println(record  + "---->" + words);
 
 		// set header and value in map
 		Map<String, String> fieldMap = getFieldMap(headerList, words);
