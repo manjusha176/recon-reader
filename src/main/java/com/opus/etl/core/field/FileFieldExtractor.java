@@ -16,7 +16,9 @@ public class FileFieldExtractor implements IFieldExtractor {
 		List<String> headerList = getHeaderList(config);
 
 		String delimiter = config.getFieldSeperator();
-		char[] delimiterChar = delimiter.toCharArray(); // TODO convert delimiter datatype from String to char
+		char[] delimiterChar = delimiter.toCharArray();
+
+		// TODO convert delimiter datatype from String to char
 
 		ArrayList<String> words = new ArrayList<>();
 		boolean notInsideComma = true;
@@ -29,7 +31,7 @@ public class FileFieldExtractor implements IFieldExtractor {
 		}
 
 		words.add(record.substring(start));
-		System.out.println(record  + "---->" + words);
+		System.out.println(record + "---->" + words);
 
 		// set header and value in map
 		Map<String, String> fieldMap = getFieldMap(headerList, words);
@@ -67,7 +69,7 @@ public class FileFieldExtractor implements IFieldExtractor {
 		return headerList;
 	}
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		FileFieldExtractor validator = new FileFieldExtractor();
 		ConfigDTO c1 = new ConfigDTO();
 		c1.setFieldSeperator(",");
