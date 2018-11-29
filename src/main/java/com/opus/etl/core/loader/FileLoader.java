@@ -9,12 +9,12 @@ import java.util.stream.Stream;
 import com.opus.etl.core.dto.ConfigDTO;
 
 public class FileLoader implements ILoader {
-
+	@Override
 	public Stream<?> streamData(ConfigDTO config) throws IOException {
 
 		String fileName = config.getSourcePath();
 
-		Stream<?> inputStream = null;
+		Stream<?> inputStream;
 
 		inputStream = Files.lines(Paths.get(fileName), StandardCharsets.UTF_8);
 		return inputStream;
